@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <style>
-        #caja { border: 3px solid blue; padding: 20px;}
+        #caja { border: 3px solid blue; padding: 20px; width: 300px;}
     </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,11 +19,30 @@
             }
             document.getElementById("caja").innerHTML= "Nuevo contenido"
         }
+        function cambiaAnchoImagen(){
+            var imagen=document.getElementById("imagen");
+            imagen.width = imagen.width + 100;
+        }
+        function cambiaSrc(){
+            document.getElementById("imagen").src = "molinos-consuegra.jpeg"
+        }
+        function cambiaCaja(){
+            var caja = document.getElementById("caja");
+            caja.style.width='500px';
+            caja.style.backgroundColor="lightgreen";
+            caja.style.fontSize = '50px';
+            caja.style.color="red";
+        }
     </script>
 </head>
 <body>
     <h1 id="titulo">Título inicial</h1>
     <div id="caja">Contenido caja</div>
+    <img id="imagen" src="hotel.bahia.jpg" width="200" height="300">
+    <br>
     <button onclick="cambiaTitulo()">Cambiar título</button>
+    <button onclick="cambiaAnchoImagen()">Cambia ancho imagen</button>
+    <button onclick="cambiaSrc()">Cambiar imagen</button>
+    <button onclick="cambiaCaja()">Cambiar caja</button>
 </body>
 </html>
